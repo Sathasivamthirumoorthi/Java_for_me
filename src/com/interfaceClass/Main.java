@@ -11,6 +11,20 @@ public class Main {
         Pen pen = new Pen();
         Pencil pencil = new Pencil();
         doSomething(pencil);
+
+        // lambda in java
+        Writer writer = () -> System.out.println("I am the lambda");
+        writer.writes();
+
+        Writer w = new Writer() {
+            @Override
+            public void writes() {
+                System.out.println("hi");
+
+            }
+        };
+
+        Writer.hello(); // static method from interface
     }
 
 }
